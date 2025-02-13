@@ -8,31 +8,31 @@
  *  tribe( 'assets' )->remove( 'asset-name' );
  * ```
  *
- * @since __TRIBE_VERSION__
+ * @since 1.0.0
  *
- * @package Tribe\Extensions\__TRIBE_NAMESPACE__
+ * @package Tribe\Extensions\Remove_Past_Ignored_Events
  */
 
-namespace Tribe\Extensions\__TRIBE_NAMESPACE__;
+namespace Tribe\Extensions\Remove_Past_Ignored_Events;
 
 use TEC\Common\Contracts\Service_Provider;
 
 /**
  * Register Assets.
  *
- * @since __TRIBE_VERSION__
+ * @since 1.0.0
  *
- * @package Tribe\Extensions\__TRIBE_NAMESPACE__
+ * @package Tribe\Extensions\Remove_Past_Ignored_Events
  */
 class Assets extends Service_Provider {
 	/**
 	 * Binds and sets up implementations.
 	 *
-	 * @since __TRIBE_VERSION__
+	 * @since 1.0.0
 	 */
 	public function register() {
 		$this->container->singleton( static::class, $this );
-		$this->container->singleton( 'extension.__TRIBE_SLUG_CLEAN__.assets', $this );
+		$this->container->singleton( 'extension.remove_past_ignored_events.assets', $this );
 
 		$plugin = tribe( Plugin::class );
 
